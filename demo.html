@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+
+	<link rel="stylesheet" href="lz.ui.css" />
+	<script type="text/javascript" src="./jquery-1.8.2.js"></script>
+	<script type="text/javascript" src="lz.js"></script>
+	<style>
+		body{background-color: #fff;}
+		*{margin: 0; padding: 0;}
+	</style>
+</head>
+<body>
+	<button>从上往下</button>
+	<button>从左往右</button>
+	<button>从下往上</button>
+	<button>没效果</button>
+	<button>从右往左</button>
+	<button>由小变大</button>
+	<button>慢慢渐入</button>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	$(function(){
+		for (var i = 0; i < $("button").length; i++) {
+			$("button").eq(i).click(function(i){
+				return function(){
+					switch(i){
+						case 0:
+						$.lz.Alert({type:"",effect:"slideDown"});
+							break;
+						case 1:
+						$.lz.Alert({type:"",effect:"slideLeft"});
+							break;
+						case 2:
+						$.lz.Alert({type:"",effect:"slideUp"});
+							break;
+						case 3:
+						$.lz.Alert({type:"",effect:"slideRight"});
+							break;
+						case 4:
+						$.lz.Alert({type:"",effect:"none"});
+							break;
+						case 5:
+						$.lz.Alert({type:"",effect:"bigger"});
+							break;
+						case 6:
+						$.lz.Alert({type:"",effect:"fadeIn"});
+							break;
+					}
+				}
+
+			}(i));
+		};
+
+	})
+
+</script>
