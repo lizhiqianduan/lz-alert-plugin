@@ -246,4 +246,4 @@ File code : utf8 without bom
 		}
 	}
 
-})(jQuery)
+})($)
